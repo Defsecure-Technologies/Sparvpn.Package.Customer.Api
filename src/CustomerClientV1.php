@@ -1,5 +1,6 @@
 <?php
 
+namespace Sparvpn\Customer;
 
 use Illuminate\Support\Facades\Http;
 use Sparvpn\Customer\Models\CustomerInformation;
