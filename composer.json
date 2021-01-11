@@ -1,14 +1,14 @@
 {
-    "name": "sparvpn/customer",
-    "description": "SparVPN customer package",
-    "type": "Composer",
-    "license": "MIT",
-    "version": "0.0.1",
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Sparvpn\\Customer\\": "src"
         }
     },
+    "name": "sparvpn/customer",
+    "description": "SparVPN customer package",
+    "type": "Composer",
+    "license": "MIT",
+    "version": "1.0.1",
+    "minimum-stability": "stable",
     "require": {}
 }
