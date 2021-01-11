@@ -20,4 +20,14 @@ class CustomerClientV1
         return $response;
     }
 
+    /**
+     * @param string $username
+     * @return mixed
+     */
+    public function findCustomerByUsername(string $username) {
+        $response = Http::timeout(15)
+            ->withBasicAuth(env('SPARVPN_CUSTOMER_API_AUTH_USERNAME'), env('SPARVPN_CUSTOMER_API_AUTH_PASSWORD'))
+            ->get("https://sparvpncustomerapiprod.azurewebsites.net/api/v1/customer/findbyusername?username={$username}");
+        return $response;
+    }
 }
