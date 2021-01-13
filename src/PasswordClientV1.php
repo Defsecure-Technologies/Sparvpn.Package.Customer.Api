@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Http;
 class PasswordClientV1
 {
 
-    public function updatePassword(string $password, $confirmation_code) {
+    public function updatePassword(string $password, string $confirmation_code) {
         $response = Http::timeout(15)
             ->withBasicAuth(env('SPARVPN_CUSTOMER_API_AUTH_USERNAME'), env('SPARVPN_CUSTOMER_API_AUTH_PASSWORD'))
             ->put("https://sparvpncustomerapiprod.azurewebsites.net/api/v1/forgotpassword/updatepassword", ['password' => $password, 'confirmation_code' => $confirmation_code]);
